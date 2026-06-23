@@ -35,7 +35,7 @@ def get_all_employees_todo_progress():
             user_id = user.get('id')
             username = user.get('username')
             
-            # Filter todos for this user
+            # Filter todos for this user - ensure we get all tasks
             user_todos = [todo for todo in all_todos if todo.get('userId') == user_id]
             
             # Prepare task list for this user
@@ -48,7 +48,7 @@ def get_all_employees_todo_progress():
                 }
                 task_list.append(task_dict)
             
-            # Add to the main dictionary
+            # Add to the main dictionary - this ensures ALL users appear
             all_employees_data[str(user_id)] = task_list
             
             # Display progress for this employee
