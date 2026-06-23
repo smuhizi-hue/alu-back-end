@@ -51,7 +51,7 @@ def get_all_employees_todo_progress():
             # Add to the main dictionary
             all_employees_data[str(user_id)] = task_list
             
-            # Display progress for this employee (optional)
+            # Display progress for this employee
             total_tasks = len(user_todos)
             completed_tasks = [todo for todo in user_todos if todo.get('completed')]
             done_count = len(completed_tasks)
