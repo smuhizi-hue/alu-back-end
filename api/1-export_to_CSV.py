@@ -4,9 +4,9 @@ Script that fetches TODO list progress for a given employee ID from a REST API
 and exports the data to CSV format.
 """
 
+import csv
 import requests
 import sys
-import csv
 
 
 def get_employee_todo_progress(employee_id):
